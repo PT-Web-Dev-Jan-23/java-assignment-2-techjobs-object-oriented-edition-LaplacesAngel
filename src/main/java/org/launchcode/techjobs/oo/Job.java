@@ -50,24 +50,24 @@ public class Job {
     @Override
     public String toString() {
 
-        if (name == null && employer == null && location == null && positionType == null && coreCompetency == null) {
+        if ((name == null || name.equals("")) && (employer == null || String.valueOf(this.employer).isEmpty()) && (location == null || String.valueOf(this.location).isEmpty()) && (coreCompetency == null || String.valueOf(this.coreCompetency).equals(""))) {
             return "OOPS! This job does not seem to exist.";
         } else {
 
             String notAvail = "Data not available";
-            if (name == null) {
+            if (name == null || name.equals("")) {
                 name = notAvail;
             }
-            if (employer == null) {
+            if (employer == null || String.valueOf(this.employer).isEmpty()) {
                 employer = new Employer(notAvail);
             }
-            if (location == null) {
+            if (location == null || String.valueOf(this.location).isEmpty()) {
                 location = new Location(notAvail);
             }
-            if (positionType == null) {
+            if (positionType == null || String.valueOf(this.positionType).isEmpty()) {
                 positionType = new PositionType(notAvail);
             }
-            if (coreCompetency == null) {
+            if (coreCompetency == null || String.valueOf(this.coreCompetency).equals("")) {
                 coreCompetency = new CoreCompetency(notAvail);
             }
 
