@@ -48,7 +48,7 @@ public abstract class JobField {
 
 
     //In JobField, declare each of the common fields.
-    private int id;
+    private final int id;
     private static int nextId = 1;
     private String value;
 

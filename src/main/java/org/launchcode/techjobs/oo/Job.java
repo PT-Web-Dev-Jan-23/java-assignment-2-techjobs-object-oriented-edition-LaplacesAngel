@@ -53,7 +53,6 @@ public class Job {
         if ((name == null || name.equals("")) && (employer == null || String.valueOf(this.employer).isEmpty()) && (location == null || String.valueOf(this.location).isEmpty()) && (coreCompetency == null || String.valueOf(this.coreCompetency).equals(""))) {
             return "OOPS! This job does not seem to exist.";
         } else {
-
             String notAvail = "Data not available";
             if (name == null || name.equals("")) {
                 name = notAvail;
